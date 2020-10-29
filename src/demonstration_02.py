@@ -11,4 +11,14 @@ Examples:
 """
 def single_number(nums):
     # Your code here
+    #holy crap this is super fragile
+    # every number needs to specifically appear twice, and not more, except one.
+    nums.sort()
+    for i in range(0, len(nums), 2):
+        if i + 1 < len(nums) and nums[i] != nums[i + 1]:
+            return nums[i]
+    if nums[-1] != nums[-2]:
+        return nums[-1]
 
+def single_number(nums):
+    set
